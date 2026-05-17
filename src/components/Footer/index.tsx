@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import LighthouseLogo from '../ui/LighthouseLogo'
 
 const footerLinks = {
-  Plataforma: ['Analytics ao Vivo', 'Dashboard', 'Alertas', 'API'],
+  Plataforma: ['Cases', 'Dashboard', 'Alertas', 'API'],
   Soluções: ['Praia & Costeiro', 'Tráfego & Vias', 'Porto & Logística', 'Segurança Urbana'],
   Empresa: ['Sobre', 'Tecnologia', 'Parceiros', 'Contato'],
 }

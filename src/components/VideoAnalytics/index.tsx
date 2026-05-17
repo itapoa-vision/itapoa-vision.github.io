@@ -22,20 +22,18 @@ const scenarios = [
     ],
   },
   {
-    title: 'Infraestrutura Viária',
-    subtitle: 'Inspeção de Pavimento — Detecção de Danos',
+    title: 'Infraestrutura Urbana',
+    subtitle: 'Inspeção urbana - Rua 1790, Continental (Exemplo)',
     scenario: 'ROAD / INFRA',
     accentColor: 'green' as const,
+    videoSrc: '/videos/buraco.mp4',
+    videoVertical: true,
     metrics: [
-      { label: 'Buracos', value: 14, color: 'white' as const },
+      { label: 'Buracos', value: 59, color: 'white' as const },
       { label: 'Severidade', value: 'MÉDIA', color: 'yellow' as const },
-      { label: 'Km insp.', value: 47, color: 'green' as const },
+      { label: 'Metros insp.', value: 47, color: 'green' as const },
     ],
-    labels: [
-      { label: 'BURACO', color: 'rgba(255,212,0,1)', x: '20%', y: '55%', w: '14%', h: '12%' },
-      { label: 'FISSURA', color: 'rgba(255,100,0,1)', x: '55%', y: '45%', w: '20%', h: '8%' },
-      { label: 'OK', color: 'rgba(0,255,136,1)', x: '72%', y: '60%', w: '16%', h: '20%' },
-    ],
+    labels: [],
   },
   {
     title: 'Inteligência de Tráfego',
@@ -81,7 +79,7 @@ export default function VideoAnalytics() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="mb-16">
-          <SectionLabel color="green" className="mb-4">ANÁLISE DE VÍDEO AO VIVO</SectionLabel>
+          <SectionLabel color="green" className="mb-4">CASES DE EXEMPLO</SectionLabel>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <motion.h2
               className="font-rajdhani font-bold text-display text-white uppercase"
@@ -90,8 +88,8 @@ export default function VideoAnalytics() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              VISÃO EM<br />
-              <span className="text-yellow">TEMPO REAL</span>
+              CASES DE<br />
+              <span className="text-yellow">EXEMPLO</span>
             </motion.h2>
             <motion.p
               className="font-barlow text-white/45 max-w-sm text-sm lg:text-base leading-relaxed"

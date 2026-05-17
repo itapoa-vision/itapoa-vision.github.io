@@ -16,19 +16,19 @@ const barData = [
 ]
 
 const alerts = [
-  { time: '14:31:07', type: 'AGLOMERAÇÃO', location: 'Praia Norte / Cam-04', severity: 'high' },
-  { time: '14:28:43', type: 'BURACO DETECTADO', location: 'Rua 15 de Novembro / Drone-02', severity: 'medium' },
-  { time: '14:25:19', type: 'TRÁFEGO INTENSO', location: 'BR-280 KM 47 / Cam-12', severity: 'low' },
-  { time: '14:22:55', type: 'EMBARCAÇÃO', location: 'Porto Sul / Cam-07', severity: 'low' },
-  { time: '14:18:30', type: 'ACIDENTE', location: 'Av. Principal / Cam-03', severity: 'high' },
+  { time: '14:31:07', type: 'AGLOMERAÇÃO', location: 'Beira Mar 4 - Itapema do Norte / CAM-04', severity: 'high' },
+  { time: '14:28:43', type: 'BURACO DETECTADO', location: 'Rua 1790, Continental / Drone-02', severity: 'medium' },
+  { time: '14:25:19', type: 'TRÁFEGO INTENSO', location: 'Av. Celso Ramos / Cam-12', severity: 'low' },
+  { time: '14:22:55', type: 'EMBARCAÇÃO', location: 'Porto Itapoá / Cam-07', severity: 'low' },
+  { time: '14:18:30', type: 'ACIDENTE', location: 'Av. do Principe / Cam-03', severity: 'high' },
 ]
 
 const cameraStatuses = [
   { id: 'CAM-001', location: 'Farol de Itapoá', status: 'online', fps: 30, detections: 127 },
   { id: 'CAM-002', location: 'Praia Central', status: 'online', fps: 30, detections: 89 },
-  { id: 'CAM-003', location: 'BR-280 Norte', status: 'online', fps: 25, detections: 234 },
+  { id: 'CAM-003', location: 'Av. Celso Ramos', status: 'online', fps: 25, detections: 234 },
   { id: 'DRN-001', location: 'Setor Portuário', status: 'online', fps: 30, detections: 56 },
-  { id: 'CAM-015', location: 'Rua 15 de Novembro', status: 'maintenance', fps: 0, detections: 0 },
+  { id: 'CAM-015', location: 'Rua 1790, Continental', status: 'maintenance', fps: 0, detections: 0 },
 ]
 
 export default function Dashboard() {

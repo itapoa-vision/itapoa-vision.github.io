@@ -121,7 +121,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <GlowButton variant="yellow" size="lg" href="#analytics">
                 <span className="inline-block w-2 h-2 rounded-full bg-black mr-1" />
-                Ver Analytics ao Vivo
+                Ver Cases
               </GlowButton>
               <GlowButton variant="outline" size="lg" href="#contact">
                 Solicitar Demo

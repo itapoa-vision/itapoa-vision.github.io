@@ -17,6 +17,8 @@ interface AnalyticsCardProps {
   metrics: Metric[]
   labels: Array<{ label: string; color: string; x: string; y: string; w: string; h: string }>
   accentColor?: 'yellow' | 'green'
+  videoSrc?: string
+  videoVertical?: boolean
 }
 
 export default function AnalyticsCard({
@@ -27,6 +29,8 @@ export default function AnalyticsCard({
   metrics,
   labels,
   accentColor = 'yellow',
+  videoSrc,
+  videoVertical = false,
 }: AnalyticsCardProps) {
   const accent = accentColor === 'yellow' ? '#FFD400' : '#00FF88'
   const accentDim = accentColor === 'yellow' ? 'rgba(255,212,0,0.1)' : 'rgba(0,255,136,0.1)'
@@ -53,22 +57,43 @@ export default function AnalyticsCard({
         </div>
       </div>
 
-      {/* Video placeholder area */}
+      {/* Video area */}
       <div className="relative video-placeholder aspect-video overflow-hidden">
-        {/* Replace this div with: <video src="/videos/scene.mp4" autoPlay muted loop playsInline className="w-full h-full object-cover" /> */}
-
-        {/* Animated bg gradient */}
-        <motion.div
-          className="absolute inset-0"
-          animate={{
-            background: [
-              `radial-gradient(ellipse at 30% 50%, ${accentDim} 0%, transparent 60%)`,
-              `radial-gradient(ellipse at 70% 50%, ${accentDim} 0%, transparent 60%)`,
-              `radial-gradient(ellipse at 30% 50%, ${accentDim} 0%, transparent 60%)`,
-            ],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        />
+        {videoSrc ? (
+          <>
+            {videoVertical && (
+              <video
+                src={videoSrc}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover scale-110"
+                style={{ filter: 'blur(18px)', opacity: 0.6 }}
+              />
+            )}
+            <video
+              src={videoSrc}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={`absolute inset-0 w-full h-full z-10 ${videoVertical ? 'object-contain' : 'object-cover'}`}
+            />
+          </>
+        ) : (
+          <motion.div
+            className="absolute inset-0"
+            animate={{
+              background: [
+                `radial-gradient(ellipse at 30% 50%, ${accentDim} 0%, transparent 60%)`,
+                `radial-gradient(ellipse at 70% 50%, ${accentDim} 0%, transparent 60%)`,
+                `radial-gradient(ellipse at 30% 50%, ${accentDim} 0%, transparent 60%)`,
+              ],
+            }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        )}
 
         {/* Scan line */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -138,7 +163,7 @@ export default function AnalyticsCard({
         </div>
 
         {/* Center label */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 opacity-20 group-hover:opacity-10 transition-opacity">
+        <div className={`absolute inset-0 flex flex-col items-center justify-center gap-2 transition-opacity ${videoSrc ? 'opacity-0 pointer-events-none' : 'opacity-20 group-hover:opacity-10'}`}>
           <svg className="w-10 h-10 text-white/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
             <path d="M15 10l4.553-2.069A1 1 0 0121 8.82V15.18a1 1 0 01-1.447.89L15 14M4 8h11a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/>
           </svg>
