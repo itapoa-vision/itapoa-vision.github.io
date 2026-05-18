@@ -25,7 +25,7 @@ const alerts = [
 
 const cameraStatuses = [
   { id: 'CAM-001', location: 'Farol de Itapoá', status: 'online', fps: 30, detections: 127 },
-  { id: 'CAM-002', location: 'Praia Central', status: 'online', fps: 30, detections: 89 },
+  { id: 'CAM-002', location: 'Praia Princesa do Mar', status: 'online', fps: 30, detections: 89 },
   { id: 'CAM-003', location: 'Av. Celso Ramos', status: 'online', fps: 25, detections: 234 },
   { id: 'DRN-001', location: 'Setor Portuário', status: 'online', fps: 30, detections: 56 },
   { id: 'CAM-015', location: 'Rua 1790, Continental', status: 'maintenance', fps: 0, detections: 0 },
