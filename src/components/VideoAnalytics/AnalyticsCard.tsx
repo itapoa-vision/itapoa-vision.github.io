@@ -20,6 +20,8 @@ interface AnalyticsCardProps {
   accentColor?: 'yellow' | 'green'
   videoSrc?: string
   videoVertical?: boolean
+  credit?: string
+  creditUrl?: string
 }
 
 function VideoModal({
@@ -160,6 +162,8 @@ export default function AnalyticsCard({
   accentColor = 'yellow',
   videoSrc,
   videoVertical = false,
+  credit,
+  creditUrl,
 }: AnalyticsCardProps) {
   const accent = accentColor === 'yellow' ? '#FFD400' : '#00FF88'
   const accentDim = accentColor === 'yellow' ? 'rgba(255,212,0,0.1)' : 'rgba(0,255,136,0.1)'
@@ -340,6 +344,19 @@ export default function AnalyticsCard({
             />
             <span className="font-mono text-[8px] text-white/40">REC</span>
           </div>
+
+          {/* Credit */}
+          {credit && creditUrl && (
+            <a
+              href={creditUrl}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              onClick={e => e.stopPropagation()}
+              className="absolute bottom-2 right-2 z-20 font-mono text-[11px] text-white/50 hover:text-white/80 transition-colors bg-black/50 px-1.5 py-0.5"
+            >
+              {credit}
+            </a>
+          )}
         </div>
 
         {/* Card footer: metrics */}

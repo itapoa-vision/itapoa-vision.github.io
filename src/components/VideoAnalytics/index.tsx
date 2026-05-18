@@ -12,6 +12,8 @@ const scenarios = [
     accentColor: 'yellow' as const,
     videoSrc: '/videos/pontal.mp4',
     videoVertical: true,
+    credit: 'Gravação: @cassiasdrone',
+    creditUrl: 'https://www.instagram.com/cassiasdrone/',
     metrics: [
       { label: 'Pessoas', value: 43, color: 'yellow' as const },
       { label: 'No Mar', value: 7, color: 'white' as const },
@@ -26,6 +28,8 @@ const scenarios = [
     accentColor: 'green' as const,
     videoSrc: '/videos/buraco.mp4',
     videoVertical: true,
+    credit: 'Gravação: @josephfelix',
+    creditUrl: 'https://www.instagram.com/josephfelix/',
     metrics: [
       { label: 'Buracos', value: 59, color: 'white' as const },
       { label: 'Severidade', value: 'MÉDIA', color: 'yellow' as const },
@@ -52,6 +56,8 @@ const scenarios = [
     accentColor: 'green' as const,
     videoSrc: '/videos/porto.mp4',
     videoVertical: true,
+    credit: 'Gravação: LÁ DE CIMA by TGLOW',
+    creditUrl: 'https://www.youtube.com/watch?v=npUZmi5LaMY',
     metrics: [
       { label: 'Caminhões', value: 89, color: 'green' as const },
       { label: 'Containers', value: 1240, color: 'yellow' as const },
