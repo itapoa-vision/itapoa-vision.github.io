@@ -36,35 +36,28 @@ const scenarios = [
   {
     title: 'Inteligência de Tráfego',
     subtitle: 'Drone Aéreo — Fluxo Veicular',
-    scenario: 'DRONE / TRAFFIC',
+    scenario: 'DRONE / TRÂNSITO',
     accentColor: 'yellow' as const,
     metrics: [
       { label: 'Veículos', value: 342, color: 'yellow' as const },
       { label: 'Vel. Média', value: '47', unit: 'km/h', color: 'white' as const },
       { label: 'Fluxo', value: 'ALTO', color: 'white' as const },
     ],
-    labels: [
-      { label: 'CAR', color: 'rgba(255,212,0,1)', x: '15%', y: '35%', w: '10%', h: '10%' },
-      { label: 'TRUCK', color: 'rgba(0,255,136,1)', x: '40%', y: '50%', w: '14%', h: '10%' },
-      { label: 'CAR', color: 'rgba(255,212,0,1)', x: '65%', y: '30%', w: '10%', h: '10%' },
-      { label: 'BUS', color: 'rgba(0,200,255,1)', x: '30%', y: '65%', w: '16%', h: '12%' },
-    ],
+    labels: [],
   },
   {
     title: 'Porto & Logística',
     subtitle: 'Pátio de Containers — Rastreamento de Ativos',
-    scenario: 'PORT / LOGISTICS',
+    scenario: 'EFICIÊNCIA PORTUÁRIA / LOGÍSTICA',
     accentColor: 'green' as const,
+    videoSrc: '/videos/porto.mp4',
+    videoVertical: true,
     metrics: [
       { label: 'Caminhões', value: 89, color: 'green' as const },
       { label: 'Containers', value: 1240, color: 'yellow' as const },
       { label: 'Ocupação', value: '74', unit: '%', color: 'white' as const },
     ],
-    labels: [
-      { label: 'TRUCK', color: 'rgba(0,255,136,1)', x: '10%', y: '50%', w: '20%', h: '15%' },
-      { label: 'CONTAINER', color: 'rgba(255,212,0,1)', x: '40%', y: '30%', w: '25%', h: '18%' },
-      { label: 'TRUCK', color: 'rgba(0,255,136,1)', x: '68%', y: '55%', w: '18%', h: '14%' },
-    ],
+    labels: [],
   },
 ]
 
