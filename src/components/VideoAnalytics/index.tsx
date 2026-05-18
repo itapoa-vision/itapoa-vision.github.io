@@ -7,19 +7,17 @@ import SectionLabel from '../ui/SectionLabel'
 const scenarios = [
   {
     title: 'Monitoramento de Praia',
-    subtitle: 'Farol de Itapoá — Análise Costeira',
-    scenario: 'BEACH / COASTAL',
+    subtitle: 'Análise de Ocupação da Praia',
+    scenario: 'PRAIA / SEGURANÇA',
     accentColor: 'yellow' as const,
+    videoSrc: '/videos/pontal.mp4',
+    videoVertical: true,
     metrics: [
-      { label: 'Pessoas', value: 1284, color: 'yellow' as const },
-      { label: 'Densidade', value: '82', unit: '%', color: 'white' as const },
-      { label: 'Alertas', value: 3, color: 'white' as const },
+      { label: 'Pessoas', value: 43, color: 'yellow' as const },
+      { label: 'No Mar', value: 7, color: 'white' as const },
+      { label: 'Na Areia', value: 36, color: 'white' as const },
     ],
-    labels: [
-      { label: 'GRUPO', color: 'rgba(255,212,0,1)', x: '8%', y: '40%', w: '18%', h: '22%' },
-      { label: 'NADADOR', color: 'rgba(255,212,0,1)', x: '60%', y: '55%', w: '10%', h: '15%' },
-      { label: 'EMBARCAÇÃO', color: 'rgba(0,255,136,1)', x: '35%', y: '60%', w: '20%', h: '12%' },
-    ],
+    labels: [],
   },
   {
     title: 'Infraestrutura Urbana',
@@ -76,7 +74,7 @@ export default function VideoAnalytics() {
       {/* Subtle top gradient fade */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-screen-2xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="mb-16">
           <SectionLabel color="green" className="mb-4">CASES DE EXEMPLO</SectionLabel>
