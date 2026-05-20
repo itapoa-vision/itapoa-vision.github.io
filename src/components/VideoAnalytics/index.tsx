@@ -42,6 +42,10 @@ const scenarios = [
     subtitle: 'Drone Aéreo — Fluxo Veicular',
     scenario: 'DRONE / TRÂNSITO',
     accentColor: 'yellow' as const,
+    videoSrc: '/videos/trafego.mp4',
+    videoVertical: true,
+    credit: 'Gravação: @cassiasdrone',
+    creditUrl: 'https://www.instagram.com/cassiasdrone/',
     metrics: [
       { label: 'Veículos', value: 342, color: 'yellow' as const },
       { label: 'Vel. Média', value: '47', unit: 'km/h', color: 'white' as const },
