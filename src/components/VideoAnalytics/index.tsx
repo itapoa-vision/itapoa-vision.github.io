@@ -47,9 +47,9 @@ const scenarios = [
     credit: 'Gravação: @cassiasdrone',
     creditUrl: 'https://www.instagram.com/cassiasdrone/',
     metrics: [
-      { label: 'Veículos', value: 342, color: 'yellow' as const },
+      { label: 'Veículos', value: 6, color: 'yellow' as const },
       { label: 'Vel. Média', value: '47', unit: 'km/h', color: 'white' as const },
-      { label: 'Fluxo', value: 'ALTO', color: 'white' as const },
+      { label: 'Fluxo', value: 'BOM', color: 'white' as const },
     ],
     labels: [],
   },
