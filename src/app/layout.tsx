@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Orbitron, Rajdhani, JetBrains_Mono, Barlow } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const orbitron = Orbitron({
@@ -47,6 +48,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="pt-BR"
       className={`${orbitron.variable} ${rajdhani.variable} ${jetbrainsMono.variable} ${barlow.variable}`}
     >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-LP8QE2S583"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LP8QE2S583');
+          `}
+        </Script>
+      </head>
       <body className="bg-black text-white antialiased overflow-x-hidden">
         {children}
       </body>
